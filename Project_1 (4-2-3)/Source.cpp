@@ -52,7 +52,7 @@ void del_even_numbers(int* arr, int size) {
 		}
 	}
 	for (int i = 0; i < new_size; i++) {
-		cout << new_arr[i] << ", ";			// смог реализвать только вывод на экран, не понимаю как написать функцию, возвращающую значение
+		cout << new_arr[i] << ", ";			
 	} 
 	
 }
@@ -96,8 +96,8 @@ int main() {
 		a = array_random_filling(size);
 	};
 	array_print(a, size);
-	//a = replace_last_el(a, size);
-	//array_print(a, size);
+	a = replace_last_el(a, size);
+	array_print(a, size);
 	del_even_numbers(a, size);
 	int* b = create_array(a, size);
 	array_print(b, size);
