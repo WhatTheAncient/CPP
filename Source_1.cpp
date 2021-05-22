@@ -3,28 +3,38 @@
 using namespace std;
 
 
-int* array_keyboard_filling(const size_t array_size, const string& message) {
-	auto arr = new int[array_size];
-	for (int i = 0; i < array_size; i++) {
+int* array_keyboard_filling(const size_t size, , const string& message)
+{
+	auto array = new int[size];
+	for (size_t i = 0; i < num; i++) {
 		cout << message;
-		cin >> arr[i];
+		cin >> array[i];
 	};
-	return arr;
+
+	return array;
 };
 
-int* array_random_filling(const size_t array_size) {
+int* array_random_filling(const size_t size)
+{
 	random_device rd;
 	mt19937 gen(rd());
-	int rand_min = -10, rand_max = 20;
+
+	const int rand_min = -10;
+	const int rand_max = 20;
+
 	uniform_int_distribution <> dis(rand_min, rand_max);
-	auto arr = new int[array_size];
-	for (int i = 0; i < array_size; i++) {
-		arr[i] = dis(gen);
+
+	auto array = new int[size];
+	for (size_t i = 0; i < array_size; i++) {
+		array[i] = dis(gen);
 	};
-	return arr;
+
+	return array;
 };
 
-void array_destroyer(int* arr) {
+
+void array_destroyer(int* arr) 
+{
 	delete[] arr;
 };
 
@@ -65,12 +75,15 @@ int* create_divided_array(int* arr, const size_t size) {
 	return new_arr;
 }
 
-void array_print(int* arr, const size_t size) {
-	for (int i = 0; i < size; i++) {
-		cout << arr[i] << ", ";
+void array_print(const int* array, const size_t size)
+{
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << array[i] << ", ";
 	};
-	cout << endl;
+	cout << '\n';
 };
+
 
 
 int main() {

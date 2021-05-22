@@ -48,8 +48,8 @@ int count_of_elements(int* arr, const size_t size);
 
 bool multiple_of_5(const int number);
 /**
-* \brief Checks number for a multiple of 5.
-* \param number - number.
+* \brief  Checks number for a multiple of 5.
+* \param  number - number.
 * \return True if number multiple of 5, else - False.
 */
 
@@ -95,7 +95,7 @@ int main()
 	const auto choice = static_cast<Filling_Choice>(input);
 
 	int* my_array = nullptr;
-	const string message = "Enter the element of the array";
+	const string message = "Enter the element of the array: ";
 	switch (choice)
 	{
 	case Filling_Choice::keyboard:
