@@ -92,10 +92,12 @@ int main()
 	case Filling_Choice::keyboard:
 		{
 			my_array = array_keyboard_filling(size, message);
+			break;
 		};
 	case Filling_Choice::random:
 		{
 			my_array = array_random_filling(size);
+			break;
 		};
 	default: {};
 	}
